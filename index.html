@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="ressources/fonts/fontawesome-free-5.15.3-web/css/all.min.css"
+    />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>Ohmyfood</title>
   </head>
   <body>
     <header>
-      <img src="/ressources/images/logo/ohmyfood.png" alt="Ohmyfoot" />
-
+       <h1>Ohmyfood</h1>
       <!-- AJOUTER LE CHAMPS LOCALISATION -->
+      <div class="localisation">
+        <p>
+          <i id="localisation" class="fas fa-map-marker-alt"></i>
+          Paris, Belleville
+        </p>
+      </div>
     </header>
 
     <section id="explorer" class="fond-gris">
-      <h1>Réservez le menu qui vous convient</h1>
-      <span class="h1"
-        >Découvrez des restaurants d'exception,<br />
+      <h2>Réservez le menu qui vous convient</h2>
+      <span class="span-h1">
+        Découvrez des restaurants d'exception,<br />
         séléctionnés par nos soins.</span
       >
       <input
@@ -31,7 +40,7 @@
     <section id="fonctionnement">
       <article class="etape">
         <span class="chiffre">1</span>
-        <i class="fas fa-moblie-alt"></i>
+        <i class="fas fa-mobile-alt"></i>
         <p>Choisissez un restaurant</p>
       </article>
       <article class="etape">
@@ -48,16 +57,25 @@
 
     <section id="restaurants">
       <h2>Restaurants</h2>
-      <article class="carte"></article>
+      <div class="conteneur-cartes">
+        <a href="#">
+          <article class="carte">
+            <img src="" alt="" />
+            <h3><span class="span-h3"></span></h3>
+            <img class="icone-favoris" src="" alt="fav" />
+          </article>
+        </a>
+      </div>
     </section>
 
     <footer>
+      <!-- INTEGRER LOGO EN POLICE-->
       <img src="/ressources/images/logo/ohmyfood.png" alt="Ohmyfood" />
       <section>
-        <a href=""><img src="" alt="" /> Proposer un restaurant</a>
-        <a href=""><img src="" alt="" /> Devenir partenaire</a>
-        <a href="">Mentions légales</a>
-        <a href="">Contact</a>
+        <a href="#"><i class="fas fa-"></i>Proposer un restaurant</a>
+        <a href="#"><i class="fas fa-"></i>Devenir partenaire</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
       </section>
     </footer>
   </body>
