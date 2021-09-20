@@ -1,0 +1,10 @@
+section {
+  counter-reset: step;
+  & ol {
+    list-style: none;
+    & li:before {
+      counter-increment: step;
+      content: counter(step);
+    }
+  }
+}

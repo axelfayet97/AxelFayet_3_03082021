@@ -1,0 +1,11 @@
+@import "../utils/mixins";
+
+
+h1 {
+ @include title-font;
+ text-align: center;
+}
+
+h2, .span-h2, p {
+  @include text-font;
+}  
