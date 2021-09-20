@@ -1,1 +1,1 @@
-h1{font-family:"Shrikhand",serif;color:red}/*# sourceMappingURL=style.css.map */
+h1{font-family:"Shrikhand",sans-serif;text-align:center}h2,.span-h2,p{font-family:"Roboto",sans-serif}section{counter-reset:step}section ol{list-style:none}section ol li:before{counter-increment:step;content:counter(step)}/*# sourceMappingURL=style.css.map */
