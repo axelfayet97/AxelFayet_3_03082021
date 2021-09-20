@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/axelfayet97/AxelFayet_3_03082021/issues"
   },
-  "homepage": "https://github.com/axelfayet97/AxelFayet_3_03082021#readme"
+  "homepage": "https://github.com/axelfayet97/AxelFayet_3_03082021#readme",
+  "dependencies": {
+    "sass": "^1.41.1"
+  }
 }
