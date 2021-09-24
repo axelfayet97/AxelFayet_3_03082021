@@ -1,0 +1,11 @@
+header h1 {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.localisation {
+  background: map-get($colors, gray);
+}
+
+#book-now {
+    background-color: lighten(map-get($colors, gray), 5%) ;
+}
