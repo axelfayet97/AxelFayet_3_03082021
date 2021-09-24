@@ -1,10 +1,13 @@
 section {
+  padding: 80px 0;
   counter-reset: step;
   & ol {
     list-style: none;
     & li:before {
       counter-increment: step;
       content: counter(step);
+      background-color: map-get($colors, color-primary);
+      border-radius: 100%;
     }
   }
 }
