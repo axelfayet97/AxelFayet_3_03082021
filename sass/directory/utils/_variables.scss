@@ -1,0 +1,25 @@
+// COLORS
+$colors:(
+color-primary: #9356dc,
+color-secondary: #ff79da,
+color-tertiary: #99e2d0,
+black: #000,
+gray: #eaeaea,
+white: #fff
+);
+
+$color-btn: linear-gradient(to top, map-get($colors, color-primary), map-get($colors, color-secondary));
+
+// FONT-WEIGHT
+
+$font-weights :(
+    thin: 100,
+    extra-light: 200,
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semi-bold: 600,
+    bold: 700,
+    extra-bold: 800,
+    black: 900
+);
