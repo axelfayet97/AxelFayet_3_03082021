@@ -1,0 +1,19 @@
+.functioning-list {
+  display: flex;
+  & a {
+    width: 100%;
+    color: map-get($colors, black);
+  }
+  &__content {
+    display: flex;
+    background-color: lighten(map-get($colors, gray), 6%);
+    border-radius: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    &:before {
+      color: map-get($colors, white);
+    }
+    &--active {
+      background-color: lighten(map-get($colors, color-primary), 30%);
+    }
+  }
+}
