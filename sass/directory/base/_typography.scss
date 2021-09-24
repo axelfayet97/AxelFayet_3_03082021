@@ -1,11 +1,45 @@
-@import "../utils/mixins";
-
-
-h1 {
- @include title-font;
- text-align: center;
+body {
+  @include text-font;
 }
 
-h2, .span-h2, p {
-  @include text-font;
-}  
+h1 {
+  @include title-font;
+  text-align: center;
+}
+
+.localisation {
+  text-align: center;
+  &__text {
+    font-weight: 600;
+    color: lighten(map-get($colors, black), 20%);
+  }
+  &__icon {
+    font-size: 20px;
+  }
+}
+
+#book-now h2 {
+  text-align: center;
+  & .book-now__span-h2 {
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+  }
+}
+
+button {
+  color: map-get($colors, white);
+  font-weight: 600;
+}
+
+h3 {
+  @extend h1;
+}
+
+p {
+  display: inline;
+}
+
+a {
+  text-decoration: none;
+}
