@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:public/css/style.css --style compressed --no-source-map --no-package-lock",
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css --style expanded --no-source-map",
     "prefix": "postcss .public/css/style.css --use autoprefixer -d./public/css/prefixed/"
   },
   "repository": {
