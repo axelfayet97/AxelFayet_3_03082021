@@ -1,0 +1,19 @@
+.footer {
+  background-color: darken(map-get($colors, gray), 70%);
+  &__title {
+    color: white; /* A changer par couleur fonction arriere plan*/
+    @include mobile-only {
+      text-align: left;
+    }
+  }
+  &__section {
+  }
+      &__link {
+          color: white; /* comme titre*/
+          display: inline-block;
+          width: 25%;
+          @include mobile-only {
+              display: block;
+          }
+      }
+  }
