@@ -23,46 +23,47 @@
       <h1>Ohmyfood</h1>
       <!-- AJOUTER LE CHAMPS LOCALISATION -->
       <div class="localisation">
-        <p>
-          <i class="localisation localisation__icon" class="fas fa-map-marker-alt"></i>
+        <p class="localisation__text">
+          <i class="localisation localisation__icon fas fa-map-marker-alt"></i>
           Paris, Belleville
         </p>
       </div>
     </header>
 
-    <section id="explore" class="explore explore-bg">
+    <section id="book-now" class="book-now book-now-bg">
       <h2>Réservez le menu qui vous convient
-      <span class="explore explore__span-h2">
+      <span class="book-now book-now__span-h2">
         Découvrez des restaurants d'exception,<br />
         séléctionnés par nos soins.</span
       ></h2>
-      <input
-        class="explore explore__ohmyfood-cta"
+      <button
+        class="book-now book-now__ohmyfood-cta book-now__ohmyfood-cta--bg
+        book-now__ohmyfood-cta--shadow"
         type="button"
-        value="Explorer nos restaurants"
-      />
+      >
+      Explorer nos restaurants</button>
     </section>
 
     <section id="functioning">
-      <ol>
-        <li class="functioning functioning__number">
-          <article class="functioning functioning__number functioning__number--step">
+      <ol class="functioning-list">
+        <a href="#"><li class="functioning-list__content">
+          <article class="functioning-list functioning-list__number">
             <i class="fas fa-mobile-alt"></i>
             <p>Choisissez un restaurant</p>
           </article>
-        </li>
-        <li class="functioning functioning__number">
-          <article class="functioning functioning__number functioning__number--step">
+        </li></a>
+        <a href="#"><li class="functioning-list">
+          <article class="functioning-list functioning-list__number">
             <i class="fas fa-list-ul"></i>
             <p>Composez votre menu</p>
           </article>
-        </li>
-        <li class="functioning functioning__number">
-          <article class="functioning functioning__number functioning__number--step">
+        </li></a>
+        <a href="#"><li class="functioning-list functioning-list--active">
+          <article class="functioning-list functioning-list__number">
             <i class="fas fa-list-ul"></i>
             <p>Dégustez au restaurant</p>
           </article>
-        </li>
+        </li></a>
       </ol>
         
         
@@ -82,14 +83,10 @@
       </div>
     </section>
 
-    <footer>
-      <!-- INTEGRER LOGO EN POLICE-->
-      <h3>Ohmyfood</h3>
-      <section>
-        <a href="#"><i class="fas fa-"></i>Proposer un restaurant</a>
-        <a href="#"><i class="fas fa-"></i>Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+    <footer class="footer">
+      <h3 class="footer__title">Ohmyfood</h3>
+      <section class="footer__section">
+        <a href="#" class="footer__link"><i class="fas fa-utensils"></i>Proposer un restaurant</a><a href="#" class="footer__link"><i class="fas fa-hands-helping"></i>Devenir partenaire</a><a href="#" class="footer__link">Mentions légales</a><a href="#" class="footer__link">Contact</a>
       </section>
     </footer>
   </body>
