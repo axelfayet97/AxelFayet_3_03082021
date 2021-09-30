@@ -1,19 +1,44 @@
 .functioning-list {
   display: flex;
+  @include tablet-only {
+    flex-direction: column;
+  }
+  &__number {
+    margin-left: 10px;
+    @include tablet-only {
+      flex-direction: row;
+    }
+  }
   & a {
+    position: relative;
     width: 100%;
+    margin: 3% 0;
+    padding: 0;
     color: map-get($colors, black);
   }
+
   &__content {
-    display: flex;
     background-color: lighten(map-get($colors, gray), 6%);
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5% 4%;
     &:before {
       color: map-get($colors, white);
+      padding: 5px 10px;
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
     }
-    &--active {
-      background-color: lighten(map-get($colors, color-primary), 30%);
+    & i {
+      margin: 0 10px;
+      color: lighten(map-get($colors, black), 40%);
+    }
+  }
+  &--active {
+    background-color: lighten(map-get($colors, color-primary), 30%);
+    & i {
+      color: map-get($colors, color-primary);
     }
   }
 }
