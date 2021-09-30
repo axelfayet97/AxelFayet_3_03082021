@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+@mixin card-border{
+  border-radius: 20px;
+}
+
 // RESPONSIVE
 @mixin mobile-only {
   @media (max-width: 599px) {
