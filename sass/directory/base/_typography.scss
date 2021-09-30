@@ -18,22 +18,36 @@ h1 {
   }
 }
 
-#book-now h2 {
-  text-align: center;
+.titre-h2 {
   & .book-now__span-h2 {
     display: block;
     font-weight: 300;
     font-size: 16px;
   }
 }
+.h2-book-now {
+  text-align: center;
+}
 
 button {
   color: map-get($colors, white);
   font-weight: 600;
+  @extend body;
+  font-weight: 400 !important;
 }
 
-h3 {
-  @extend h1;
+.card {
+  & .menu-title {
+    font-weight: 500;
+    display: block;
+  }
+  &__span-menu-title {
+    display: inherit;
+    font-weight: 400;
+  }
+  & i {
+    color: red;
+  }
 }
 
 p {
@@ -42,4 +56,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.functioning-list {
+  &--active {
+    font-weight: 500;
+  }
 }
