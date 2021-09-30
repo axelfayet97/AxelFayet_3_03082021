@@ -13,11 +13,11 @@ section {
 }
 
 .section-bg {
-    background-color: lighten(map-get($colors, gray), 5%);
-    & .titre-h2 {
-      margin-bottom: 20px;
-    } 
-    & .book-now__span-h2 {
-      margin-top: 20px;
-    }
+  background-color: lighten(map-get($colors, gray), 5%);
+  & .titre-h2 {
+    margin-bottom: 20px;
+  }
+  & .book-now__span-h2 {
+    margin-top: 20px;
+  }
 }
