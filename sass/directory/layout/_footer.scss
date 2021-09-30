@@ -6,14 +6,20 @@
       text-align: left;
     }
   }
-  &__section {
+  &__title {
+    @include tablet-only {
+      text-align: left;
+    }
   }
-      &__link {
-          color: white; /* comme titre*/
-          display: inline-block;
-          width: 25%;
-          @include mobile-only {
-              display: block;
-          }
-      }
+  &__link {
+    color: white; /* comme titre*/
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    @include tablet-only {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
   }
+}
