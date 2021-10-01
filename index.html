@@ -22,23 +22,24 @@
   </head>
   <body>
     <header>
-      <a href="./index.html"><h1 class="titre-h1">Ohmyfood</h1></a>
-      <!-- AJOUTER LE CHAMPS LOCALISATION -->
-      <div class="localisation">
-        <p class="localisation__text">
-          <i class="localisation localisation__icon fas fa-map-marker-alt"></i>
-          Paris, Belleville
-        </p>
-      </div>
+      <a href="./index.html">
+      <h1 class="titre-h1">ohmyfood</h1>
+    </a>
     </header>
+
+    <section class="localisation">
+      <i class="localisation localisation__icon fas fa-map-marker-alt"></i>
+      <input type="text" placeholder="Votre ville" value="Paris, Belleville" class="localisation__text">
+        </input>
+</section>
 
     <section id="book-now" class="book-now section-bg">
       <h2 class="titre-h2 h2-book-now">Réservez le menu qui vous convient
-      <span class="book-now book-now__span-h2">
+      <span class="book-now__span-h2">
         Découvrez des restaurants d'exception, séléctionnés par nos soins.</span
       ></h2>
       <button
-        class="book-now book-now__ohmyfood-cta book-now__ohmyfood-cta--bg
+        class="book-now__ohmyfood-cta book-now__ohmyfood-cta--bg
         book-now__ohmyfood-cta--shadow"
         type="button"
       >
@@ -73,21 +74,24 @@
 
     <section id="restaurants">
       <h2 class="titre-h2">Restaurants</h2>
-      <div class="restaurants card card__container">
+      <div class="card card__container">
         <a href="#">
-          <article class="card new-item">
+          <article class="card">
+            <div class="card--new-item"><p>Nouveau</p></div>
             <img src="./ressources/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du coût" />
-            <p class="menu-title">La palette du goût<span class="card__span-menu-title">Ménilmontant</span></p>
-            <i class="far fa-heart"></i>
-            <i class="fas fa-heart"></i>
+            <div class="card__description">
+            <p class="card__menu-title">La palette du goût<span class="card__menu-title--span-menu-title">Ménilmontant</span>
+            </p>    
+              <i class="far fa-heart"></i>
+            </div>  
           </article>
         </a>
       </div>
     </section>
 
     <footer class="footer">
-      <h3 class="footer__title">Ohmyfood</h3>
       <section class="footer__section">
+        <h3 class="footer__title">ohmyfood</h3>
         <a href="#" class="footer__link"><i class="fas fa-utensils"></i> Proposer un restaurant</a><a href="#" class="footer__link"><i class="fas fa-hands-helping"></i> Devenir partenaire</a><a href="#" class="footer__link">Mentions légales</a><a href="mailto:#" class="footer__link">Contact</a>
       </section>
     </footer>
