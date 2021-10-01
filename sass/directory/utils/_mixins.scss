@@ -1,5 +1,6 @@
 @mixin title-font {
   font-family: "Shrikhand", serif;
+  font-weight: 500;
 }
 
 @mixin text-font {
@@ -25,4 +26,10 @@
   @media (max-width: 1024px) {
     @content;
   }
+}
+
+@mixin box-layout{
+  box-shadow: $shadow;
+  border-radius: 20px;
+  padding: 7% 4%;
 }
