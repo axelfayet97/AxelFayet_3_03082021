@@ -1,7 +1,9 @@
 .functioning-list {
   display: flex;
+  align-items: center;
   @include tablet-only {
     flex-direction: column;
+    align-items: flex-start;
   }
   &__number {
     margin-left: 10px;
@@ -9,19 +11,18 @@
       flex-direction: row;
     }
   }
-  & a {
+  a {
     position: relative;
     width: 100%;
-    margin: 3% 0;
+    margin: 3%;
     padding: 0;
     color: map-get($colors, black);
   }
 
   &__content {
+    @include box-layout;
     background-color: lighten(map-get($colors, gray), 6%);
-    border-radius: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 5% 4%;
+
     &:before {
       color: map-get($colors, white);
       padding: 5px 10px;
@@ -30,7 +31,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    & i {
+    i {
       margin: 0 10px;
       color: lighten(map-get($colors, black), 40%);
     }
