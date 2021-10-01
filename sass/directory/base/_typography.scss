@@ -7,19 +7,8 @@ h1 {
   text-align: center;
 }
 
-.localisation {
-  text-align: center;
-  &__text {
-    font-weight: 600;
-    color: lighten(map-get($colors, black), 20%);
-  }
-  &__icon {
-    font-size: 20px;
-  }
-}
-
 .titre-h2 {
-  & .book-now__span-h2 {
+  .book-now__span-h2 {
     display: block;
     font-weight: 300;
     font-size: 16px;
@@ -29,6 +18,37 @@ h1 {
   text-align: center;
 }
 
+h3 {
+  @extend h1 ;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  &:active {
+    @extend a;
+  }
+}
+
+p {
+  @include tablet-only {
+    font-size: 18px;
+  }
+}
+
+.localisation {
+  text-align: center;
+  input {
+    @include text-font;
+    font-weight: 600;
+    color: lighten(map-get($colors, black), 20%);
+  }
+  
+  &__icon {
+    font-size: 20px;
+  }
+}
+
 button {
   color: map-get($colors, white);
   font-weight: 600;
@@ -36,26 +56,18 @@ button {
   font-weight: 400 !important;
 }
 
+
 .card {
-  & .menu-title {
-    font-weight: 500;
-    display: block;
+  &__menu-title {
+    font-weight: 600;
+    line-height: 1.5;
+    &--span-menu-title {
+      font-weight: 400;
+    }
   }
-  &__span-menu-title {
-    display: inherit;
-    font-weight: 400;
+  i {
+    font-size: 25px;
   }
-  & i {
-    color: red;
-  }
-}
-
-p {
-  display: inline;
-}
-
-a {
-  text-decoration: none;
 }
 
 .functioning-list {
