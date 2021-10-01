@@ -1,9 +1,9 @@
 section {
   padding: 40px 5%;
   counter-reset: step;
-  & ol {
+  ol {
     list-style: none;
-    & li:before {
+    li:before {
       counter-increment: step;
       content: counter(step);
       background-color: map-get($colors, color-primary);
@@ -14,10 +14,10 @@ section {
 
 .section-bg {
   background-color: lighten(map-get($colors, gray), 5%);
-  & .titre-h2 {
+  .titre-h2 {
     margin-bottom: 20px;
   }
-  & .book-now__span-h2 {
+  .book-now__span-h2 {
     margin-top: 20px;
   }
 }
