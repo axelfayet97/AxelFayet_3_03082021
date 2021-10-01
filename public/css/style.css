@@ -8,20 +8,10 @@ body, button {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+h1, h3 {
   font-family: "Shrikhand", serif;
+  font-weight: 500;
   text-align: center;
-}
-
-.localisation {
-  text-align: center;
-}
-.localisation__text {
-  font-weight: 600;
-  color: #333333;
-}
-.localisation__icon {
-  font-size: 20px;
 }
 
 .titre-h2 .book-now__span-h2 {
@@ -34,30 +24,43 @@ h1 {
   text-align: center;
 }
 
+a, a:active {
+  text-decoration: none;
+  color: #000;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 18px;
+  }
+}
+
+.localisation {
+  text-align: center;
+}
+.localisation input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #333333;
+}
+.localisation__icon {
+  font-size: 20px;
+}
+
 button {
   color: #fff;
   font-weight: 600;
   font-weight: 400 !important;
 }
 
-.card .menu-title {
-  font-weight: 500;
-  display: block;
+.card__menu-title {
+  font-weight: 600;
+  line-height: 1.5;
 }
-.card__span-menu-title {
-  display: inherit;
+.card__menu-title--span-menu-title {
   font-weight: 400;
 }
 .card i {
-  color: red;
-}
-
-p {
-  display: inline;
-}
-
-a {
-  text-decoration: none;
+  font-size: 25px;
 }
 
 .functioning-list--active {
@@ -77,11 +80,32 @@ a {
   background: linear-gradient(to top, #9356dc, #ff79da);
 }
 .book-now__ohmyfood-cta--shadow {
-  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 10px 0px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 #restaurants .card {
   padding: 0 !important;
+  position: relative;
+}
+#restaurants .card__menu-title {
+  width: 50%;
+}
+#restaurants .card__menu-title--span-menu-title {
+  display: block;
+}
+#restaurants .card__description {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#restaurants .card i {
+  display: inline;
+}
+#restaurants .card__container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  padding: 7% 4%;
 }
 #restaurants .card img {
   width: 100%;
@@ -92,12 +116,38 @@ a {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
+#restaurants .card--new-item {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  color: #278870;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  right: 5%;
+  top: 5%;
+}
+#restaurants .card i {
+  transition: -webkit-text-fill-color 0.2s ease-out;
+}
+#restaurants .card i:hover, #restaurants .card i :focus, #restaurants .card i :active {
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  font-weight: 600;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .functioning-list {
   display: flex;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .functioning-list {
     flex-direction: column;
+    align-items: flex-start;
   }
 }
 .functioning-list__number {
@@ -111,17 +161,17 @@ a {
 .functioning-list a {
   position: relative;
   width: 100%;
-  margin: 3% 0;
+  margin: 3%;
   padding: 0;
   color: #000;
 }
-.functioning-list__content, #restaurants .card__container {
-  background-color: #f9f9f9;
-  border-radius: 20px;
+.functioning-list__content {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  padding: 5% 4%;
+  border-radius: 20px;
+  padding: 7% 4%;
+  background-color: #f9f9f9;
 }
-.functioning-list__content:before, #restaurants .card__container:before {
+.functioning-list__content:before {
   color: #fff;
   padding: 5px 10px;
   position: absolute;
@@ -129,7 +179,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
 }
-.functioning-list__content i, #restaurants .card__container i {
+.functioning-list__content i {
   margin: 0 10px;
   color: #666666;
 }
@@ -143,16 +193,19 @@ a {
 .footer {
   background-color: #383838;
 }
+.footer section {
+  padding-top: 20px;
+}
 .footer__title {
   color: white;
   /* A changer par couleur fonction arriere plan*/
 }
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .footer__title {
     text-align: left;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 599px) {
   .footer__title {
     text-align: left;
   }
@@ -160,6 +213,7 @@ a {
 .footer__link {
   color: white;
   /* comme titre*/
+  padding: 2% 0;
   display: inline-block;
   width: 25%;
   text-align: center;
@@ -174,7 +228,7 @@ a {
 
 .titre-h1 {
   position: relative;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 5px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 15px;
 }
 
@@ -186,6 +240,11 @@ a {
   .localisation {
     padding: 1.3%;
   }
+}
+.localisation input {
+  padding-left: 20px;
+  background: transparent;
+  border: none;
 }
 
 section {
