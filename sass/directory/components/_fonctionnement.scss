@@ -16,13 +16,24 @@
     width: 100%;
     margin: 3%;
     padding: 0;
+    transition: transform 0.2s linear;
     color: map-get($colors, black);
+    &:hover,
+    &:focus,
+    &:active {
+      @include zoom-effect;
+    }
+    &:active {
+      @include scale-down-transition;
+    }
   }
 
   &__content {
     @include box-layout;
-    background-color: lighten(map-get($colors, gray), 6%);
-
+    transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: lighten(map-get($colors, color-primary), 38%);
+    }
     &:before {
       color: map-get($colors, white);
       padding: 5px 10px;
@@ -32,12 +43,15 @@
       transform: translateY(-50%);
     }
     i {
-      margin: 0 10px;
+      margin: 0 20px;
       color: lighten(map-get($colors, black), 40%);
+      &:before {
+        vertical-align: middle;
+      }
     }
   }
   &--active {
-    background-color: lighten(map-get($colors, color-primary), 30%);
+    background-color: lighten(map-get($colors, color-primary), 30%) !important;
     & i {
       color: map-get($colors, color-primary);
     }
