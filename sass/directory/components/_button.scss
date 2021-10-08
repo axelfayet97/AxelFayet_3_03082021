@@ -1,4 +1,5 @@
 .book-now__ohmyfood-cta {
+  transition: transform 0.2s linear;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -10,5 +11,14 @@
     background: $color-btn;
   }
   &--shadow {
-    box-shadow: $shadow;  }
+    box-shadow: $shadow;
+  }
+  &:hover,
+  &:focus,
+  &:active {
+    @include zoom-effect;
+  }
+  &:active {
+    @include scale-down-transition;
+  }
 }
