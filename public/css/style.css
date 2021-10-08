@@ -24,10 +24,12 @@ h1, h3 {
   text-align: center;
 }
 
-a, a:active {
+a,
+a:visited {
   text-decoration: none;
   color: #000;
 }
+
 @media (max-width: 768px) {
   p {
     font-size: 18px;
@@ -52,22 +54,53 @@ button {
   font-weight: 400 !important;
 }
 
+.functioning-list--active {
+  font-weight: 500;
+}
+
 .card__menu-title {
   font-weight: 600;
   line-height: 1.5;
 }
 .card__menu-title--span-menu-title {
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 0.9em;
 }
 .card i {
-  font-size: 25px;
+  font-size: 1.5em;
+}
+.card--new-item p {
+  font-weight: 500;
+  font-size: 0.9em !important;
 }
 
-.functioning-list--active {
-  font-weight: 500;
+.footer__title {
+  color: white;
+  /* A changer par couleur fonction arriere plan*/
+}
+@media (max-width: 768px) {
+  .footer__title {
+    text-align: left;
+  }
+}
+@media (max-width: 599px) {
+  .footer__title {
+    text-align: left;
+  }
+}
+.footer__link {
+  color: white !important;
+  /* comme titre*/
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .footer__link {
+    text-align: left;
+  }
 }
 
 .book-now__ohmyfood-cta {
+  transition: transform 0.2s linear;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -82,13 +115,59 @@ button {
 .book-now__ohmyfood-cta--shadow {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.book-now__ohmyfood-cta:hover, .book-now__ohmyfood-cta:focus, .book-now__ohmyfood-cta:active {
+  transform: scale(102%);
+}
+.book-now__ohmyfood-cta:active {
+  transform: scale(99%);
+}
 
+#restaurants .card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  #restaurants .card-container {
+    flex-direction: column;
+  }
+}
 #restaurants .card {
-  padding: 0 !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 20px;
+  padding: 7% 4%;
   position: relative;
+  margin: 4% 1%;
+  padding: 0 !important;
+  width: 33.3333333333%;
+  transition: transform 0.2s linear;
+}
+@media (max-width: 768px) {
+  #restaurants .card {
+    width: 100%;
+    margin: 0;
+    margin-top: 10%;
+  }
+}
+#restaurants .card:hover, #restaurants .card:focus, #restaurants .card:active {
+  transform: scale(102%);
+}
+#restaurants .card:active {
+  transform: scale(99%);
+}
+#restaurants .card:first-child {
+  margin-left: 0;
+}
+@media (max-width: 768px) {
+  #restaurants .card:first-child {
+    margin-top: 0;
+  }
+}
+#restaurants .card:last-child {
+  margin-right: 0;
 }
 #restaurants .card__menu-title {
-  width: 50%;
+  width: 70%;
 }
 #restaurants .card__menu-title--span-menu-title {
   display: block;
@@ -102,16 +181,11 @@ button {
 #restaurants .card i {
   display: inline;
 }
-#restaurants .card__container {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  border-radius: 20px;
-  padding: 7% 4%;
-}
 #restaurants .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: bottom;
+  object-position: center;
   border-radius: 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
@@ -130,14 +204,14 @@ button {
   right: 5%;
   top: 5%;
 }
-#restaurants .card i {
-  transition: -webkit-text-fill-color 0.2s ease-out;
-}
-#restaurants .card i:hover, #restaurants .card i :focus, #restaurants .card i :active {
+#restaurants .card .far:hover, #restaurants .card .far:focus, #restaurants .card .far:active {
   background: linear-gradient(to top, #9356dc, #ff79da);
   font-weight: 600;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#restaurants .card .far:active {
+  transform: scale(99%);
 }
 
 .functioning-list {
@@ -163,13 +237,23 @@ button {
   width: 100%;
   margin: 3%;
   padding: 0;
+  transition: transform 0.2s linear;
   color: #000;
+}
+.functioning-list a:hover, .functioning-list a:focus, .functioning-list a:active {
+  transform: scale(102%);
+}
+.functioning-list a:active {
+  transform: scale(99%);
 }
 .functioning-list__content {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
   padding: 7% 4%;
-  background-color: #f9f9f9;
+  transition: background-color 0.2s ease-in-out;
+}
+.functioning-list__content:hover {
+  background-color: #faf7fd;
 }
 .functioning-list__content:before {
   color: #fff;
@@ -180,11 +264,14 @@ button {
   transform: translateY(-50%);
 }
 .functioning-list__content i {
-  margin: 0 10px;
+  margin: 0 20px;
   color: #666666;
 }
+.functioning-list__content i:before {
+  vertical-align: middle;
+}
 .functioning-list--active {
-  background-color: #e4d5f6;
+  background-color: #e4d5f6 !important;
 }
 .functioning-list--active i {
   color: #9356dc;
@@ -196,34 +283,31 @@ button {
 .footer section {
   padding-top: 20px;
 }
-.footer__title {
-  color: white;
-  /* A changer par couleur fonction arriere plan*/
-}
 @media (max-width: 768px) {
   .footer__title {
-    text-align: left;
-  }
-}
-@media (max-width: 599px) {
-  .footer__title {
-    text-align: left;
+    margin-bottom: 5%;
   }
 }
 .footer__link {
-  color: white;
-  /* comme titre*/
-  padding: 2% 0;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 25%;
-  text-align: center;
+  padding: 10px 0;
 }
 @media (max-width: 768px) {
   .footer__link {
     display: block;
-    width: 100%;
-    text-align: left;
+    width: auto;
+    padding-bottom: 2px;
   }
+}
+.footer__link .fas {
+  margin-right: 10px;
+  width: 20px;
+}
+.footer__link:hover, .footer__link:focus, .footer__link:active {
+  text-decoration: underline;
 }
 
 .titre-h1 {
