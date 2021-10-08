@@ -19,15 +19,13 @@ h1 {
 }
 
 h3 {
-  @extend h1 ;
+  @extend h1;
 }
 
-a {
+a,
+a:visited {
   text-decoration: none;
   color: #000;
-  &:active {
-    @extend a;
-  }
 }
 
 p {
@@ -43,7 +41,7 @@ p {
     font-weight: 600;
     color: lighten(map-get($colors, black), 20%);
   }
-  
+
   &__icon {
     font-size: 20px;
   }
@@ -56,22 +54,45 @@ button {
   font-weight: 400 !important;
 }
 
+.functioning-list {
+  &--active {
+    font-weight: 500;
+  }
+}
 
 .card {
   &__menu-title {
     font-weight: 600;
     line-height: 1.5;
     &--span-menu-title {
-      font-weight: 400;
+      font-weight: 300;
+      font-size: 0.9em;
     }
   }
   i {
-    font-size: 25px;
+    font-size: 1.5em;
+  }
+  &--new-item p {
+    font-weight: 500;
+    font-size: 0.9em !important;
   }
 }
 
-.functioning-list {
-  &--active {
-    font-weight: 500;
+.footer {
+  &__title {
+    color: white; /* A changer par couleur fonction arriere plan*/
+    @include tablet-only {
+      text-align: left;
+    }
+    @include mobile-only {
+      text-align: left;
+    }
+  }
+  &__link {
+    color: white !important; /* comme titre*/
+    text-align: center;
+    @include tablet-only {
+      text-align: left;
+    }
   }
 }
