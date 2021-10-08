@@ -7,7 +7,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-@mixin card-border{
+@mixin card-border {
   border-radius: 20px;
 }
 
@@ -28,8 +28,16 @@
   }
 }
 
-@mixin box-layout{
+@mixin box-layout {
   box-shadow: $shadow;
   border-radius: 20px;
   padding: 7% 4%;
+}
+
+@mixin zoom-effect {
+  transform: scale(102%);
+}
+
+@mixin scale-down-transition {
+  transform: scale(99%);
 }
