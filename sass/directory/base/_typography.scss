@@ -2,66 +2,73 @@ body {
   @include text-font;
 }
 
-h1 {
-  @include title-font;
-  text-align: center;
-}
-
-.titre-h2 {
-  .book-now__span-h2 {
-    display: block;
-    font-weight: 300;
-    font-size: 16px;
+.header-page__link {
+  &__icon {
+    font-weight: 600;
+    font-size: 20px;
   }
-}
-.h2-book-now {
-  text-align: center;
+  &__title {
+    @include title-font;
+    text-align: center;
+  }
+  
 }
 
-h3 {
-  @extend h1;
+/*========== HOME ==========*/
+
+.book-now {
+  .book-now__title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    &--span-title {
+      font-weight: 300;
+      font-size: 0.7em;
+    }
+  }
 }
 
 a,
 a:visited {
   text-decoration: none;
-  color: #000;
-}
-
-p {
-  @include tablet-only {
-    font-size: 18px;
-  }
+  color: inherit;
 }
 
 .localisation {
   text-align: center;
-  input {
+  &__input {
     @include text-font;
+    font-size: 16px;
     font-weight: 600;
     color: lighten(map-get($colors, black), 20%);
-  }
-
-  &__icon {
-    font-size: 20px;
+    &__icon {
+      font-size: 1.1em;
+    }
   }
 }
 
-button {
-  color: map-get($colors, white);
-  font-weight: 600;
+.book-now__ohmyfood-cta {
+  color: map-get($colors, white) !important;
   @extend body;
-  font-weight: 400 !important;
+  font-size: 14px;
+  font-weight: 500;
 }
 
-.functioning-list {
-  &--active {
-    font-weight: 500;
+.functioning {
+  &__list__content {
+    &--active {
+      font-weight: 500;
+    }
   }
 }
 
-.card {
-  &__menu-title {
+.restaurants__card-container {
+  &__card {
+    &--new-item {
+      font-weight: 500;
+      font-size: 0.9em !important;
+    }
+    &__description__menu-title {
     font-weight: 600;
     line-height: 1.5;
     &--span-menu-title {
@@ -72,27 +79,66 @@ button {
   i {
     font-size: 1.5em;
   }
-  &--new-item p {
-    font-weight: 500;
-    font-size: 0.9em !important;
+}
+}
+/*========== PAGE MENU ==========*/
+
+.menu {
+  &__title-layout {
+    &__title {
+      @include title-font; 
+    }
+    &__favorite {
+      i {
+        font-size: 1.5em;
+      }
+    }
+  }
+  &__container {
+    &__title {
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    &__meal {
+      @include box-layout;
+      &__title-container {
+        &__meal-title {
+          font-weight: 600;
+        }
+        &__meal-title-span {
+          font-size: 0.9em;
+        }
+      }
+      &__price {
+        font-weight: 600;
+      }
+      &--favourite {
+        font-size: 30px;
+      }
+    }
   }
 }
 
+/*========== FOOTER ==========*/
+
 .footer {
-  &__title {
-    color: white; /* A changer par couleur fonction arriere plan*/
-    @include tablet-only {
-      text-align: left;
-    }
-    @include mobile-only {
-      text-align: left;
-    }
+&__title {
+  color: white; /* A changer par couleur fonction arriere plan*/
+  font-size: 20px;
+  @include title-font;
+  @include desktop-only {
+    text-align: center;
   }
+  @include mobile-only {
+    text-align: left;
+  }
+}
+  &__section {
   &__link {
-    color: white !important; /* comme titre*/
     text-align: center;
     @include tablet-only {
       text-align: left;
     }
   }
+}
 }
