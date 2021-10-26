@@ -1,3 +1,31 @@
+.localisation {
+  background: map-get($colors, gray);
+  padding: 10px;
+  @include tablet-only {
+    padding: 4%;
+  }
+  &__icon {
+    padding-right: 20px;
+  }
+  &__input {
+    background: none;
+    border: none;
+    text-align: center;
+  }
+}
+
+.book-now {
+    @extend %section-bg;
+
+  .book-now__title {
+    margin-bottom: 20px;
+    &--span-title {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+}
+
 section {
   padding: 40px 5%;
   counter-reset: step;
@@ -9,15 +37,5 @@ section {
       background-color: map-get($colors, color-primary);
       border-radius: 100%;
     }
-  }
-}
-
-.section-bg {
-  background-color: lighten(map-get($colors, gray), 5%);
-  .titre-h2 {
-    margin-bottom: 20px;
-  }
-  .book-now__span-h2 {
-    margin-top: 20px;
   }
 }
