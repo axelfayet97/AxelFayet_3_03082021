@@ -1,33 +1,46 @@
 .footer {
   background-color: darken(map-get($colors, gray), 70%);
-  section {
-    padding-top: 20px;
-  }
-  &__title {
+  padding: 30px;
+  &__section {
+    display: flex;
+    justify-content: space-around;
     @include tablet-only {
-      margin-bottom: 5%;
+      flex-direction: column;
     }
-  }
-  &__link {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 25%;
-    padding: 10px 0;
-    @include tablet-only {
-      display: block;
-      width: auto;
-      padding-bottom: 2px;
+    &__title {
+      @include tablet-only {
+        margin-bottom: 5%;
+      }
     }
-
-    .fas {
-      margin-right: 10px;
-      width: 20px;
+    &__link {
+      padding: 5px 0;
+      &__name {
+        color: #fff;
+        transition: color .2s linear;
+        position: relative;
+        display: inline-block;
+        &::after {
+            transition: all .2s ease-in-out;
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            display: block;
+            background-color: map-get($colors, color-tertiary);
+            height: 2px;
+            width: 0%;
+          }
+          &:hover, &:focus, &:active {
+            color: map-get($colors, color-tertiary);
+          }
+      }
+      &:hover .footer__section__link__name::after {
+        width: 100%;
+      }  
+        &__icon {
+          margin-right: 10px;
+          width: 20px;
+        }
     }
-    &:hover,
-    &:focus,
-    &:active {
-      text-decoration: underline;
     }
-  }
+  
 }
