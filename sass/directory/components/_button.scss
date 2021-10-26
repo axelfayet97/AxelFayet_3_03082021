@@ -1,14 +1,17 @@
-.book-now__ohmyfood-cta {
+a.book-now__ohmyfood-cta {
   transition: transform 0.2s linear;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   border: none;
   border-radius: 50px;
-  padding: 15px;
-  cursor: pointer;
+  padding: 15px 30px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  max-width: 250px;
   &--bg {
     background: $color-btn;
+    opacity: 100%;
+    transition: transform 0.2s, opacity 0.5s;
   }
   &--shadow {
     box-shadow: $shadow;
@@ -17,8 +20,20 @@
   &:focus,
   &:active {
     @include zoom-effect;
+    opacity: 85%;
+
   }
   &:active {
     @include scale-down-transition;
+  }
+}
+
+.menu__ohmyfood-cta {
+  @extend .book-now__ohmyfood-cta;
+  &--bg {
+    @extend .book-now__ohmyfood-cta--bg;
+  }
+  &--shadow {
+    @extend .book-now__ohmyfood-cta--shadow;
   }
 }
