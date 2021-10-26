@@ -6,7 +6,9 @@
 @mixin text-font {
   font-family: "Roboto", sans-serif;
 }
-
+%section-bg {
+    background-color: lighten(map-get($colors, gray), 5%);
+}
 @mixin card-border {
   border-radius: 20px;
 }
@@ -18,12 +20,12 @@
   }
 }
 @mixin tablet-only {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     @content;
   }
 }
 @mixin desktop-only {
-  @media (max-width: 1024px) {
+  @media (min-width: 1025px) {
     @content;
   }
 }
@@ -32,6 +34,24 @@
   box-shadow: $shadow;
   border-radius: 20px;
   padding: 7% 4%;
+  margin: auto;
+}
+
+@mixin grid-layout {
+  @include desktop-only {
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include tablet-only {
+    &:first-child {
+    }
+    &:last-child {
+    }
+  }
 }
 
 @mixin zoom-effect {
@@ -40,4 +60,30 @@
 
 @mixin scale-down-transition {
   transform: scale(99%);
+}
+
+@mixin favorite-heart {
+  &__favorite {
+    &:hover,
+    &:focus,
+    &:active {
+      & i:last-of-type {
+        opacity: 0;
+      }
+      & i:first-child {
+        background: $color-btn;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 100%;
+      }
+    }
+    &--filled {
+      transition: opacity 0.2s ease-in;
+      opacity: 0%;
+      color: transparent;
+    }
+    &--empty {
+      transition: opacity 0.2s ease-in;
+    }
+  }
 }
