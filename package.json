@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:public/css/style.css --style expanded --no-source-map",
-    "prefix": "postcss .public/css/style.css --use autoprefixer -d./public/css/prefixed/"
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/",
+    "prod": "sass ./sass/main.scss:public/css/style.css --style expanded --no-source-map && npm run prefix"
   },
   "repository": {
     "type": "git",
@@ -13,7 +14,6 @@
   },
   "author": "",
   "license": "ISC",
-  "browserlist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/axelfayet97/AxelFayet_3_03082021/issues"
   },
