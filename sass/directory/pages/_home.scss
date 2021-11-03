@@ -1,9 +1,6 @@
 .localisation {
   background: map-get($colors, gray);
-  padding: 10px;
-  @include tablet-only {
-    padding: 4%;
-  }
+  padding: 20px;
   &__icon {
     padding-right: 20px;
   }
@@ -15,8 +12,7 @@
 }
 
 .book-now {
-    @extend %section-bg;
-
+  @extend %section-bg;
   .book-now__title {
     margin-bottom: 20px;
     &--span-title {
