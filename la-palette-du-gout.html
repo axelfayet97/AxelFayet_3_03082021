@@ -20,16 +20,13 @@
       rel="stylesheet"
       href="ressources/fonts/fontawesome-free-5.15.3-web/css/all.min.css"
     />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Ohmyfood</title>
+<link rel="shortcut icon" href="ressources/images/logo/favicon.png" type="image/x-icon" />    <title>Ohmyfood!</title>
   </head>
   <body>
     <header class="header-page">
       <a href="./home.html" class="header-page__link">
         <i class="header-page__link__icon fas fa-arrow-left"></i>
-        <h1 class="header-page__link__title">
-           ohmyfood
-        </h1>
+        <h1 class="header-page__link__title">ohmyfood</h1>
       </a>
     </header>
     <div id="image-restaurant">
@@ -44,10 +41,14 @@
         <h2 class="menu__title-layout__title">La palette du goût</h2>
         <span class="menu__title-layout__favorite fa-stack fa-1x">
           <i
-            class="menu__title__favorite--filled fas fa-heart fa-stack-1x"
+            class="
+              menu__title-layout__favorite--filled
+              fas
+              fa-heart fa-stack-1x
+            "
           ></i>
           <i
-            class="menu__title__favorite--empty far fa-heart fa-stack-1x"
+            class="menu__title-layout__favorite--empty far fa-heart fa-stack-1x"
           ></i>
         </span>
       </div>
@@ -55,36 +56,183 @@
         <h3 class="menu__container__title">Entrées</h3>
         <ul>
           <li class="menu__container__meal">
-              <span class="menu__container__meal__title-container">
-                <span class="menu__container__meal__title-container__meal-title">Fricassée d'escargot</span>
-                <span class="menu__container__meal__title-container__meal-title-span">Au piment d'Espelette</span>
-              </span>
-              <span class="menu__container__meal__price">25€</span></span
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Fricassée d'escargot</span
               >
-              <span class="menu__container__meal--favourite">
-                <i class="fas fa-check-circle"></i>
-              </span>
-            </li>
-          </ul>
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Au piment d'Espelette</span
+              >
+            </span>
+            <span class="menu__container__meal__price">25€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Foie gras de canard mi-cuit</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Et ses copeaux de truffe noire</span
+              >
+            </span>
+            <span class="menu__container__meal__price">35€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Oeuf au plat</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Assaisonné à la truffe sur lit de caviar</span
+              >
+            </span>
+            <span class="menu__container__meal__price">20€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+        </ul>
       </div>
+      <div class="menu__container">
+        <h3 class="menu__container__title">Plats</h3>
+        <ul>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Filet de boeuf aux herbes</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Accompagné de sa ribambelle de légumes</span
+              >
+            </span>
+            <span class="menu__container__meal__price">40€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Parmentier de queue de boeuf</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >À la truffe noire sur sa purée de panais</span
+              >
+            </span>
+            <span class="menu__container__meal__price">35€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Filet de turbot</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Aux agrumes</span
+              >
+            </span>
+            <span class="menu__container__meal__price">44€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="menu__container">
+        <h3 class="menu__container__title">Desserts</h3>
+        <ul>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Paris-Brest</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Revisité</span
+              >
+            </span>
+            <span class="menu__container__meal__price">18€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Macaron au chocolat d'exception
+              </span>
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Et glace à la vanille de Madagascar</span
+              >
+            </span>
+            <span class="menu__container__meal__price">22€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+          <li class="menu__container__meal">
+            <span class="menu__container__meal__title-container">
+              <span class="menu__container__meal__title-container__meal-title"
+                >Mousse au chocolat</span
+              >
+              <span
+                class="menu__container__meal__title-container__meal-title-span"
+                >Au piment d'Espelette et à la truffe noire</span
+              >
+            </span>
+            <span class="menu__container__meal__price">23€</span>
+            <span class="menu__container__meal--favourite">
+              <i class="fas fa-check-circle"></i>
+            </span>
+          </li>
+        </ul>
+      </div>
+      <a
+        href="#"
+        class="
+          menu__ohmyfood-cta menu__ohmyfood-cta--bg menu__ohmyfood-cta--shadow
+        "
+      >
+        Commander
+      </a>
     </section>
-    <a class="menu__ohmyfood-cta menu__ohmyfood-cta--bg menu__ohmyfood-cta--shadow">
-      Commander
-    </a>
-    
+
     <footer class="footer">
       <p class="footer__title">ohmyfood</p>
       <div class="footer__section">
         <a href="#" class="footer__section__link">
-          <span class="footer__section__link__name"><i class="footer__section__link__icon fas fa-utensils"></i>Proposer un
-          restaurant</span>
-          </a>
-          <a href="#" class="footer__section__link">
-          <span class="footer__section__link__name"><i class="footer__section__link__icon fas fa-hands-helping"></i>Devenir
-          partenaire</span>
+          <span class="footer__section__link__name"
+            ><i class="footer__section__link__icon fas fa-utensils"></i>Proposer
+            un restaurant</span
+          >
         </a>
-        <a href="#" class="footer__section__link"><span class="footer__section__link__name">Mentions légales</span></a>
-        <a href="mailto:#" class="footer__section__link"><span class="footer__section__link__name">Contact</span></a>
+        <a href="#" class="footer__section__link">
+          <span class="footer__section__link__name"
+            ><i class="footer__section__link__icon fas fa-hands-helping"></i
+            >Devenir partenaire</span
+          >
+        </a>
+        <a href="#" class="footer__section__link"
+          ><span class="footer__section__link__name">Mentions légales</span></a
+        >
+        <a href="mailto:#" class="footer__section__link"
+          ><span class="footer__section__link__name">Contact</span></a
+        >
       </div>
     </footer>
   </body>
