@@ -11,7 +11,6 @@ body {
     @include title-font;
     text-align: center;
   }
-  
 }
 
 /*========== HOME ==========*/
@@ -20,7 +19,7 @@ body {
   .book-now__title {
     text-align: center;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 27px;
     &--span-title {
       font-weight: 300;
       font-size: 0.7em;
@@ -54,12 +53,9 @@ a:visited {
   font-weight: 500;
 }
 
-.functioning {
-  &__list__content {
-    &--active {
-      font-weight: 500;
-    }
-  }
+.functioning__list__content:hover {
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
 }
 
 .restaurants__card-container {
@@ -69,24 +65,24 @@ a:visited {
       font-size: 0.9em !important;
     }
     &__description__menu-title {
-    font-weight: 600;
-    line-height: 1.5;
-    &--span-menu-title {
-      font-weight: 300;
-      font-size: 0.9em;
+      font-weight: 600;
+      line-height: 1.5;
+      &--span-menu-title {
+        font-weight: 300;
+        font-size: 0.9em;
+      }
+    }
+    i {
+      font-size: 1.5em;
     }
   }
-  i {
-    font-size: 1.5em;
-  }
-}
 }
 /*========== PAGE MENU ==========*/
 
 .menu {
   &__title-layout {
     &__title {
-      @include title-font; 
+      @include title-font;
     }
     &__favorite {
       i {
@@ -100,20 +96,23 @@ a:visited {
       text-transform: uppercase;
     }
     &__meal {
-      @include box-layout;
       &__title-container {
         &__meal-title {
           font-weight: 600;
         }
         &__meal-title-span {
-          font-size: 0.9em;
+          font-size: 0.8em;
         }
       }
       &__price {
         font-weight: 600;
+        font-size: 15px;
       }
       &--favourite {
-        font-size: 30px;
+        font-size: 25px;
+        @include mobile-only {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -122,23 +121,23 @@ a:visited {
 /*========== FOOTER ==========*/
 
 .footer {
-&__title {
-  color: white; /* A changer par couleur fonction arriere plan*/
-  font-size: 20px;
-  @include title-font;
-  @include desktop-only {
-    text-align: center;
-  }
-  @include mobile-only {
-    text-align: left;
-  }
-}
-  &__section {
-  &__link {
-    text-align: center;
-    @include tablet-only {
+  &__title {
+    color: white; /* A changer par couleur fonction arriere plan*/
+    font-size: 20px;
+    @include title-font;
+    @include desktop-only {
+      text-align: center;
+    }
+    @include mobile-only {
       text-align: left;
     }
   }
-}
+  &__section {
+    &__link {
+      text-align: center;
+      @include tablet-only {
+        text-align: left;
+      }
+    }
+  }
 }
