@@ -28,4 +28,15 @@ $font-weights: (
   black: 900,
 );
 
-$shadow: (rgba(149, 157, 165, 0.2) 0px 8px 24px);
+//Btn shadows
+
+$shadow: (rgba(149, 157, 165, 0.4) 0px 8px 24px);
+$darker-shadow: (rgba(97, 103, 106, 0.6) 0px 10px 24px);
+
+// Loader variables
+
+$cd-bars: map-get($colors, color-primary);
+$size: 3vh;
+$anim-dur: 500ms;
+$num-bars: 5;
+$anim-delay: $anim-dur / $num-bars;
