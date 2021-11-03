@@ -1,13 +1,14 @@
 @import "./directory/utils/variables";
 @import "./directory/utils/functions";
 @import "./directory/utils/mixins";
-
+@import "./directory/utils/keyframes";
 @import "./directory/base/reset";
 @import "./directory/base/typography";
 
 @import "./directory/components/button";
 @import "./directory/components/card-restaurant";
 @import "./directory/components/fonctionnement";
+@import "./directory/components/loading";
 
 @import "./directory/layout/footer";
 @import "./directory/layout/header";
