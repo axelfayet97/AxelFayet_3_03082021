@@ -1,0 +1,42 @@
+// LOADING PAGE ANIMATION
+@keyframes bars {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes loaderAnimation {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+    visibility: hidden;
+  }
+}
+
+// FADE IN
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+// CHECK ROTATION
+@keyframes rotate {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
