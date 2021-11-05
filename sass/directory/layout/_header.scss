@@ -1,20 +1,20 @@
-.header-page {
-  box-shadow: $shadow;
-  &__link {
+.header-page__link {
+    box-shadow: $shadow;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 10px;
     &__icon {
+      transition: margin .2s ease-in-out;
       position: absolute;
       left: 30%;
       @include tablet-only {
         left: 10%;
-        
       }
-      &__title {
+      &:hover, &:focus, &:active {
+        padding-right: 10px;
+        margin-left: -10px;
       }
    }
  }
-}
