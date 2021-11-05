@@ -1,19 +1,19 @@
 .footer {
   background-color: darken(map-get($colors, gray), 70%);
   padding: 30px;
+  &__title {
+    margin-bottom: 20px;
+  }
   &__section {
     display: flex;
     justify-content: space-around;
     @include tablet-only {
       flex-direction: column;
     }
-    &__title {
-      @include tablet-only {
-        margin-bottom: 5%;
-      }
-    }
+
     &__link {
       padding: 5px 0;
+      width: max-content;
       &__name {
         color: #fff;
         transition: color .2s linear;
@@ -29,18 +29,25 @@
             height: 2px;
             width: 0%;
           }
-          &:hover, &:focus, &:active {
-            color: map-get($colors, color-tertiary);
-          }
+        }
+        &:hover {
+      .footer__section__link__name {
+        @include tablet-only {
+          text-decoration: underline;
+        }
+        @include desktop-only {
+              color: map-get($colors, color-tertiary);
+            &::after {
+              width: 100%;
+            }
+          }  
+        }
+
       }
-      &:hover .footer__section__link__name::after {
-        width: 100%;
-      }  
         &__icon {
           margin-right: 10px;
           width: 20px;
         }
     }
     }
-  
-}
+  }
