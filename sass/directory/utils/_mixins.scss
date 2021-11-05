@@ -6,8 +6,9 @@
 @mixin text-font {
   font-family: "Roboto", sans-serif;
 }
+
 %section-bg {
-    background-color: lighten(map-get($colors, gray), 5%);
+  background-color: lighten(map-get($colors, gray), 5%);
 }
 @mixin card-border {
   border-radius: 20px;
@@ -33,48 +34,46 @@
 @mixin box-layout {
   box-shadow: $shadow;
   border-radius: 20px;
-  padding: 7% 4%;
   margin: auto;
 }
 
 @mixin grid-layout {
   @include desktop-only {
-    &:first-child {
-      margin-left: 0;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+    margin-left: 0;
   }
   @include tablet-only {
-    &:first-child {
-    }
+    margin-left: 0;
+    margin-right: 0;
+ 
     &:last-child {
+      margin-bottom: 20px;
     }
   }
 }
 
 @mixin zoom-effect {
-  transform: scale(102%);
+  transform: scale(1.02);
 }
 
 @mixin scale-down-transition {
-  transform: scale(99%);
+  transform: scale(0.9);
 }
 
 @mixin favorite-heart {
   &__favorite {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
     &:hover,
     &:focus,
     &:active {
-      & i:last-of-type {
-        opacity: 0;
-      }
       & i:first-child {
         background: $color-btn;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 100%;
+      }
+      & i:last-of-type {
+        opacity: 0;
       }
     }
     &--filled {
@@ -86,4 +85,18 @@
       transition: opacity 0.2s ease-in;
     }
   }
+}
+
+@mixin three-dots-text {
+  white-space: nowrap; /* a retirer si besoin lisibilité titres*/
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+/* ANIMATIONS */
+
+@mixin rotation-animation {
+  animation-duration: 0.5s;
+  animation-name: rotate;
 }
