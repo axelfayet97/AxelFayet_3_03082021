@@ -1,4 +1,4 @@
-// LOADING PAGE ANIMATION
+// LOADING PAGE ANIMATIONS
 @keyframes bars {
   0% {
     transform: scaleY(0.5);
@@ -14,7 +14,7 @@
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     visibility: hidden;
   }
 }
