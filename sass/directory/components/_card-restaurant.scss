@@ -1,20 +1,22 @@
 .restaurants {
   @extend %section-bg;
-&__card-container {
+  &__title {
+    @include tablet-only {
+      margin-bottom: 20px;
+    }
+  }
+  &__card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     @include tablet-only {
       flex-direction: column;
     }
-    h2 {
-      display: block;
-    }
     &__card {
       @include box-layout;
       @include grid-layout;
       position: relative;
-      margin: 4% 1%;
+      margin: 2% 1%;
       padding: 0 !important;
       width: calc(100% / 3);
       transition: transform 0.2s linear;
@@ -63,7 +65,7 @@
         right: 5%;
         top: 5%;
       }
-      &__description {      
+      &__description {
         @include favorite-heart;
         padding: 15px;
         display: flex;
@@ -71,11 +73,11 @@
         align-items: center;
         &__menu-title {
           width: 70%;
-        &--span-menu-title {
-          display: block;
+          &--span-menu-title {
+            display: block;
+          }
         }
       }
     }
   }
-}
 }
