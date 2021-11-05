@@ -1,39 +1,28 @@
-a.book-now__ohmyfood-cta {
+.book-now__ohmyfood-cta-wrapper,
+.menu__ohmyfood-cta-wrapper {
   transition: transform 0.2s linear;
   border: none;
-  border-radius: 50px;
-  padding: 15px 30px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
-  max-width: 250px;
-  &--bg {
-    background: $color-btn;
-    opacity: 100%;
-    transition: transform 0.2s, opacity 0.5s;
+  margin: 4%;
+  @include tablet-only {
+    margin: 40px 0 ;
   }
-  &--shadow {
-    box-shadow: $shadow;
-  }
-  &:hover,
-  &:focus,
-  &:active {
-    @include zoom-effect;
-    opacity: 85%;
-
-  }
-  &:active {
-    @include scale-down-transition;
-  }
-}
-
-.menu__ohmyfood-cta {
-  @extend .book-now__ohmyfood-cta;
-  &--bg {
-    @extend .book-now__ohmyfood-cta--bg;
-  }
-  &--shadow {
-    @extend .book-now__ohmyfood-cta--shadow;
+  &__link {
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-align: center;
+    &--bg {
+      background: $color-btn;
+      opacity: 100%;
+      transition: transform 0.2s, opacity 0.5s, box-shadow 0.2s ease-in-out;
+    }
+    &--shadow {
+      box-shadow: $shadow;
+    }
+    &:hover,
+    &:focus {
+      box-shadow: $darker-shadow;
+      opacity: 85%;  
+    }
   }
 }
