@@ -36,7 +36,7 @@ $darker-shadow: (rgba(97, 103, 106, 0.6) 0px 10px 24px);
 // Loader variables
 
 $cd-bars: map-get($colors, color-primary);
-$size: 3vh;
+$size: 20px;
 $anim-dur: 500ms;
 $num-bars: 5;
 $anim-delay: $anim-dur / $num-bars;
