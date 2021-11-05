@@ -1,26 +1,19 @@
 .ohmyfood-loader {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
-  z-index: 99999;
+  z-index: 1;
   animation: loaderAnimation 0.5s normal both 2s;
   animation-delay: 2s;
   &__text {
     @include title-font;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 20px;
   }
   &__logo {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
     width: $size * 2;
     height: $size * 2;
     display: flex;
@@ -30,11 +23,7 @@
       background-color: $cd-bars;
       height: 60%;
       width: $size * 0.2;
-      @for $i from 1 through $num-bars {
-        &--#{$i} {
-          animation-delay: $anim-delay * $i;
-        }
-      }
+      @include loaderBarsAnimationFunction;
     }
   }
 }
