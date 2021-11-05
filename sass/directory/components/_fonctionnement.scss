@@ -6,30 +6,26 @@
       flex-direction: column;
       align-items: flex-start;
     }
-    li {
+  
+    &__content {
+      @include box-layout;
       @include grid-layout;
       position: relative;
       width: 100%;
-      margin: 2%;
+      margin: 4%;
       padding: 30px 15px;
       transition: transform 0.2s linear;
       color: map-get($colors, black);
-      &:hover,
-      &:focus,
-      &:active {
-        @include zoom-effect;
-      }
-      &:active {
-        @include scale-down-transition;
-      }
-    }
-    
-    &__content {
-      @include box-layout;
-      transition: background-color 0.2s ease-in-out;
+      transition: background-color .2s ease-in-out;
       background-color: lighten(map-get($colors, gray), 5%);
-      &:hover {
-        background-color: lighten(map-get($colors, color-primary), 37%);
+      &:hover, &:focus, &:active {
+        background-color: lighten(
+          map-get($colors, color-primary),
+          30%
+        );
+        & i {
+          color: map-get($colors, color-primary);
+        }
       }
       &:before {
         color: map-get($colors, white);
@@ -51,15 +47,6 @@
         margin-left: 10px;
         @include tablet-only {
           flex-direction: row;
-        }
-      }
-      &--active {
-        background-color: lighten(
-          map-get($colors, color-primary),
-          30%
-        ) !important;
-        & i {
-          color: map-get($colors, color-primary);
         }
       }
     }
