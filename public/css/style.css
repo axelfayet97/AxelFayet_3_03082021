@@ -18,7 +18,7 @@
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
     visibility: hidden;
   }
 }
@@ -46,10 +46,24 @@
   box-sizing: border-box;
 }
 
-body, .book-now__ohmyfood-cta, .menu__ohmyfood-cta {
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*========== GENERAL ==========*/
+body, .book-now__ohmyfood-cta-wrapper__link,
+.menu__ohmyfood-cta-wrapper__link {
   font-family: "Roboto", sans-serif;
 }
 
+/*========== LOADING PAGE ==========*/
+.ohmyfood-loader__text {
+  font-size: 30px;
+}
+
+/*========== HEADER ==========*/
 .header-page__link__icon {
   font-weight: 600;
   font-size: 20px;
@@ -61,20 +75,16 @@ body, .book-now__ohmyfood-cta, .menu__ohmyfood-cta {
 }
 
 /*========== HOME ==========*/
-.book-now .book-now__title {
+.book-now {
   text-align: center;
+}
+.book-now .book-now__title {
   font-weight: 600;
   font-size: 27px;
 }
 .book-now .book-now__title--span-title {
   font-weight: 300;
   font-size: 0.7em;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-  color: inherit;
 }
 
 .localisation {
@@ -90,14 +100,14 @@ a:visited {
   font-size: 1.1em;
 }
 
-.book-now__ohmyfood-cta, .menu__ohmyfood-cta {
+.book-now__ohmyfood-cta-wrapper__link,
+.menu__ohmyfood-cta-wrapper__link {
   color: #fff !important;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
 }
 
-.functioning__list__content:hover {
-  transition: all 0.2s ease-in-out;
+.functioning__list__content {
   font-weight: 500;
 }
 
@@ -126,6 +136,7 @@ a:visited {
   font-size: 1.5em;
 }
 .menu__container__title {
+  font-size: 18px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -134,6 +145,7 @@ a:visited {
 }
 .menu__container__meal__title-container__meal-title-span {
   font-size: 0.8em;
+  line-height: 1.5;
 }
 .menu__container__meal__price {
   font-weight: 600;
@@ -175,32 +187,40 @@ a:visited {
   }
 }
 
-a.book-now__ohmyfood-cta, a.menu__ohmyfood-cta {
+.book-now__ohmyfood-cta-wrapper,
+.menu__ohmyfood-cta-wrapper {
   transition: transform 0.2s linear;
   border: none;
-  border-radius: 50px;
-  padding: 15px 0px;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
-  max-width: 200px;
+  margin: 4%;
 }
-a.book-now__ohmyfood-cta--bg, a.menu__ohmyfood-cta--bg {
+@media (max-width: 1024px) {
+  .book-now__ohmyfood-cta-wrapper,
+.menu__ohmyfood-cta-wrapper {
+    margin: 40px 0;
+  }
+}
+.book-now__ohmyfood-cta-wrapper__link,
+.menu__ohmyfood-cta-wrapper__link {
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-align: center;
+}
+.book-now__ohmyfood-cta-wrapper__link--bg,
+.menu__ohmyfood-cta-wrapper__link--bg {
   background: linear-gradient(to top, #9356dc, #ff79da);
   opacity: 100%;
   transition: transform 0.2s, opacity 0.5s, box-shadow 0.2s ease-in-out;
 }
-a.book-now__ohmyfood-cta--shadow, a.menu__ohmyfood-cta--shadow {
+.book-now__ohmyfood-cta-wrapper__link--shadow,
+.menu__ohmyfood-cta-wrapper__link--shadow {
   box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
-a.book-now__ohmyfood-cta:hover, a.menu__ohmyfood-cta:hover, a.book-now__ohmyfood-cta:focus, a.menu__ohmyfood-cta:focus, a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
-  transform: scale(1.02);
-  opacity: 85%;
+.book-now__ohmyfood-cta-wrapper__link:hover, .book-now__ohmyfood-cta-wrapper__link:focus,
+.menu__ohmyfood-cta-wrapper__link:hover,
+.menu__ohmyfood-cta-wrapper__link:focus {
   box-shadow: rgba(97, 103, 106, 0.6) 0px 10px 24px;
-}
-a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
-  transform: scale(0.9);
+  opacity: 85%;
 }
 
 @media (max-width: 1024px) {
@@ -333,43 +353,35 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
     align-items: flex-start;
   }
 }
-.functioning__list li {
+.functioning__list__content {
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  border-radius: 20px;
+  margin: auto;
   position: relative;
   width: 100%;
   margin: 4%;
   padding: 30px 15px;
   transition: transform 0.2s linear;
   color: #000;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #f7f7f7;
 }
 @media (min-width: 1025px) {
-  .functioning__list li {
+  .functioning__list__content {
     margin-left: 0;
   }
 }
 @media (max-width: 1024px) {
-  .functioning__list li {
+  .functioning__list__content {
     margin-left: 0;
     margin-right: 0;
   }
-  .functioning__list li:last-child {
+  .functioning__list__content:last-child {
     margin-bottom: 20px;
   }
 }
-.functioning__list li:hover, .functioning__list li:focus, .functioning__list li:active, .functioning__list li:focus, .functioning__list li:active {
-  transform: scale(1.02);
-}
-.functioning__list li:active {
-  transform: scale(0.9);
-}
-.functioning__list__content {
-  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
-  border-radius: 20px;
-  margin: auto;
-  transition: all 0.2s ease-in-out;
-  background-color: #f7f7f7;
-}
 .functioning__list__content:hover, .functioning__list__content:focus, .functioning__list__content:active {
-  background-color: #e4d5f6 !important;
+  background-color: #e4d5f6;
 }
 .functioning__list__content:hover i, .functioning__list__content:focus i, .functioning__list__content:active i {
   color: #9356dc;
@@ -402,30 +414,23 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
 .ohmyfood-loader {
   background-color: rgba(255, 255, 255, 0.8);
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
   height: 100vh;
-  z-index: 99999;
+  z-index: 1;
   animation: loaderAnimation 0.5s normal both 2s;
   animation-delay: 2s;
 }
 .ohmyfood-loader__text {
   font-family: "Shrikhand", serif;
   font-weight: 500;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  font-size: 20px;
 }
 .ohmyfood-loader__logo {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: 6vh;
-  height: 6vh;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: space-evenly;
 }
@@ -433,7 +438,7 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
   animation: bars 500ms backwards infinite ease-in-out alternate;
   background-color: #9356dc;
   height: 60%;
-  width: 0.6vh;
+  width: 4px;
 }
 .ohmyfood-loader__logo__bar--1 {
   animation-delay: 100ms;
@@ -511,7 +516,7 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 10px;
 }
 .header-page__link__icon {
   transition: margin 0.2s ease-in-out;
@@ -596,34 +601,19 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
   animation: 1s ease-in-out 0s 1 normal both running fadein;
 }
 .menu__container:nth-child(1n+1) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .menu__container:nth-child(1n+2) {
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 .menu__container:nth-child(1n+3) {
-  animation-delay: 1.5s;
+  animation-delay: 0.9s;
 }
 .menu__container:nth-child(1n+4) {
-  animation-delay: 2s;
-}
-.menu__container:nth-child(0) {
-  animation-delay: 0s;
-}
-.menu__container:nth-child(1) {
-  animation-delay: 0.5s;
-}
-.menu__container:nth-child(2) {
-  animation-delay: 1s;
-}
-.menu__container:nth-child(3) {
-  animation-delay: 1.5s;
-}
-.menu__container:nth-child(4) {
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 .menu__container__title {
-  margin: 20px 0;
+  margin: 40px 0 10px;
 }
 .menu__container__title:after {
   content: "";
@@ -649,16 +639,16 @@ a.book-now__ohmyfood-cta:active, a.menu__ohmyfood-cta:active {
   background-color: #fff;
 }
 .menu__container__meal:nth-child(1n+1) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .menu__container__meal:nth-child(1n+2) {
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 .menu__container__meal:nth-child(1n+3) {
-  animation-delay: 1.5s;
+  animation-delay: 0.9s;
 }
 .menu__container__meal:nth-child(1n+4) {
-  animation-delay: 2s;
+  animation-delay: 1.2s;
 }
 @media (min-width: 1025px) {
   .menu__container__meal {
