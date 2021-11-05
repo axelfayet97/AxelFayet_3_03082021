@@ -1,0 +1,16 @@
+@mixin fadein-animation {
+  animation: 1s ease-in-out 0s 1 normal both running fadein;
+  @for $i from 1 to 5 {
+    &:nth-child(1n + #{$i}) {
+      animation-delay: $i * 0.3 + #{s};
+    }
+  }
+}
+
+@mixin loaderBarsAnimationFunction {
+    @for $i from 1 through $num-bars {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
+}
