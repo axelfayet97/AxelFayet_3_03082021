@@ -278,7 +278,7 @@ body, .book-now__ohmyfood-cta-wrapper__link,
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-.restaurants__card-container__card:hover, .restaurants__card-container__card:focus, .restaurants__card-container__card:active, .restaurants__card-container__card:focus, .restaurants__card-container__card:active {
+.restaurants__card-container__card:hover, .restaurants__card-container__card:focus, .restaurants__card-container__card:active {
   transform: scale(1.02);
 }
 .restaurants__card-container__card:active {
